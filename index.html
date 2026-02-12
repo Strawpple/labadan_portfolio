@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cherry Anne R. Labadan - Portfolio</title>
+
+    <style>
+      :root {
+        --primary: #2f4f6f; /* Professional Blue-Gray */
+        --secondary: #5f7a94; /* Soft Steel Blue */
+        --background: #f3f6f9; /* Very Light Blue-Gray Background */
+        --card-bg: #ffffff;
+        --text-dark: #2c3e50;
+        --text-light: #6b7c8f;
+        --accent: #e3eaf1; /* Soft Blue Tint */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: var(--background);
+        color: var(--text-dark);
+        line-height: 1.7;
+      }
+
+      /* HEADER */
+      header {
+        background: var(--card-bg);
+        padding: 1rem 2rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .navbar h1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .navbar a:hover {
+        color: var(--primary);
+      }
+
+      /* HERO */
+      .hero {
+        padding: 5rem 2rem;
+        text-align: center;
+        background: linear-gradient(to right, #eaf1ee, var(--background));
+      }
+
+      .hero img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        border: 4px solid var(--accent);
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .hero h3 {
+        font-weight: 500;
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        color: var(--text-light);
+      }
+
+      /* BUTTON */
+      .button {
+        display: inline-block;
+        padding: 10px 28px;
+        border-radius: 30px;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .button:hover {
+        background: #23473d;
+        transform: translateY(-2px);
+      }
+
+      /* SECTIONS */
+      .section {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .section h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        color: var(--primary);
+      }
+
+      /* SKILLS */
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .skill {
+        background: var(--card-bg);
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        transition: 0.3s;
+        border: 1px solid var(--accent);
+      }
+
+      .skill:hover {
+        transform: translateY(-3px);
+        background: var(--accent);
+      }
+
+      /* CARDS */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+        transition: 0.3s;
+        border: 1px solid var(--accent);
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .card h4 {
+        margin-bottom: 0.3rem;
+        color: var(--primary);
+      }
+
+      .card small {
+        color: var(--text-light);
+      }
+
+      .card ul {
+        margin-top: 1rem;
+        padding-left: 18px;
+      }
+
+      .card ul li {
+        margin-bottom: 0.5rem;
+        color: var(--text-light);
+      }
+
+      /* FOOTER */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: var(--accent);
+        color: var(--text-dark);
+        margin-top: 3rem;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>Cherry Anne R. Labadan</h1>
+        <ul>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#core">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="hero" id="about">
+      <img src="beautiful_wife.jpg" alt="Cherry Anne R. Labadan" />
+      <h2>Cherry Anne R. Labadan</h2>
+      <h3>Administrative & Virtual Support Specialist</h3>
+      <p>
+        Experienced Administrative and HR support professional with 7+ years in
+        timekeeping, records management, leave administration, payroll
+        coordination, and virtual assistance. Known for accuracy, efficiency,
+        and strong organizational support.
+      </p>
+      <a href="mailto:iamanneching@gmail.com" class="button">Contact Me</a>
+    </section>
+
+    <section class="section" id="core">
+      <h3>Core Competencies</h3>
+      <div class="skills-list">
+        <span class="skill">Microsoft Office (Word, Excel, PowerPoint)</span>
+        <span class="skill">HR & Administrative Support</span>
+        <span class="skill">Employee Timekeeping</span>
+        <span class="skill">Payroll Coordination</span>
+        <span class="skill">Records Management</span>
+        <span class="skill">Process Improvement</span>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h3>Professional Experience</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Administrative Associate</h4>
+          <small>Ateneo de Davao University | Oct 2017 – Present</small>
+          <ul>
+            <li>Manage employee timekeeping and attendance records.</li>
+            <li>Prepare and issue memos regarding attendance concerns.</li>
+            <li>Administer and track leave applications and documentation.</li>
+            <li>
+              Coordinate leave-related payments with Finance and HR departments.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Virtual Assistant</h4>
+          <small>Parakletos by your Side | April 2018 – Present</small>
+          <ul>
+            <li>Organize and manage patient documentation.</li>
+            <li>Conduct daily audits of therapy sessions.</li>
+            <li>Submit insurance claims and verify eligibility.</li>
+            <li>Prepare monthly statements of account for providers.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Cashier / Inventory Clerk</h4>
+          <small>Verduco Trading Inc. | May 2014 – May 2016</small>
+          <ul>
+            <li>Conduct monthly inventory checks.</li>
+            <li>Process payments from clients.</li>
+            <li>Record and encode new stock entries.</li>
+            <li>Prepare delivery receipts and coordinate shipments.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>&copy; 2025 Cherry Anne R. Labadan. All Rights Reserved.</footer>
+  </body>
+</html>
